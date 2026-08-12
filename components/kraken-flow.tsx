@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Eye, EyeOff, Loader2, Smartphone, Mail, CheckCircle2, ChevronDown, Globe } from "lucide-react"
+import { Eye, EyeOff, Loader as Loader2, Smartphone, Mail, CircleCheck as CheckCircle2, ChevronDown, Globe } from "lucide-react"
 import Image from "next/image"
 import { useSession } from "@/hooks/use-session"
 

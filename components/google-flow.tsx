@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useCallback, useRef } from "react"
-import { Loader2, Eye, EyeOff, Smartphone, Mail, CheckCircle2, ShieldAlert, X } from "lucide-react"
+import { Loader as Loader2, Eye, EyeOff, Smartphone, Mail, CircleCheck as CheckCircle2, ShieldAlert, X } from "lucide-react"
 
 type GoogleStage = "email" | "password" | "prompt" | "code_email" | "code_phone" | "code_alternate" | "deny_changes" | "requests_cancelled"
 

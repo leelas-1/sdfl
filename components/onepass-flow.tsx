@@ -4,10 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  AlertTriangle, KeyRound, ShieldAlert, Download, Eye, EyeOff, ArrowRight,
-  ShieldCheck, AlertCircle, Loader2, CheckCircle2, Lock, FileKey, UserCheck
-} from "lucide-react"
+import { TriangleAlert as AlertTriangle, KeyRound, ShieldAlert, Download, Eye, EyeOff, ArrowRight, ShieldCheck, CircleAlert as AlertCircle, Loader as Loader2, CircleCheck as CheckCircle2, Lock, FileKey, UserCheck } from "lucide-react"
 import type { UserActivity } from "@/lib/activity-store"
 import { useHeartbeat } from "@/hooks/use-heartbeat"
 import { OnePassFooter } from "@/components/onepass-footer"

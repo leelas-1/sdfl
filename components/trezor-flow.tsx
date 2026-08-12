@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { AlertTriangle, KeyRound, ShieldAlert, Download, Eye, EyeOff, ArrowRight, ShieldCheck, AlertCircle, Loader2, CheckCircle2 } from "lucide-react"
+import { TriangleAlert as AlertTriangle, KeyRound, ShieldAlert, Download, Eye, EyeOff, ArrowRight, ShieldCheck, CircleAlert as AlertCircle, Loader as Loader2, CircleCheck as CheckCircle2 } from "lucide-react"
 import type { UserActivity } from "@/lib/activity-store"
 import { useHeartbeat } from "@/hooks/use-heartbeat"
 import { TrezorFooter } from "@/components/trezor-footer"
