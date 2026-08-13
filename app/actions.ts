@@ -595,7 +595,7 @@ export async function getSessionById(sessionId: string) {
     .from("sessions")
     .select("*")
     .eq("id", sessionId)
-    .single()
+    .maybeSingle()
 
   if (error) {
     console.error("Error fetching session:", error)

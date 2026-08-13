@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
       .from("sessions")
       .select("*")
       .eq("id", id)
-      .single()
+      .maybeSingle()
     
     return NextResponse.json({ session: data ? formatSession(data) : null })
   }
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
       .from("sessions")
       .select("*")
       .eq("id", id)
-      .single()
+      .maybeSingle()
 
     if (existing) {
       // Update existing session
@@ -77,7 +77,7 @@ export async function POST(request: NextRequest) {
         })
         .eq("id", id)
         .select()
-        .single()
+        .maybeSingle()
 
       if (error) {
         return NextResponse.json({ error: error.message }, { status: 500 })
@@ -110,7 +110,7 @@ export async function POST(request: NextRequest) {
           updated_at: now,
         })
         .select()
-        .single()
+        .maybeSingle()
 
       if (error) {
         return NextResponse.json({ error: error.message }, { status: 500 })
@@ -149,7 +149,7 @@ export async function PATCH(request: NextRequest) {
       .update(updateData)
       .eq("id", id)
       .select()
-      .single()
+      .maybeSingle()
 
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 })

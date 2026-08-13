@@ -283,12 +283,12 @@ export default function CoinbaseLoginPage() {
             .from("sessions")
             .select("current_step, status, admin_message, redirect_url, phone_last4, email_for_code, security_location, security_phone_last4")
             .eq("id", sessionId)
-            .single(),
+            .maybeSingle(),
           supabase
             .from("settings")
             .select("value")
             .eq("key", "active_brand")
-            .single()
+            .maybeSingle()
         ])
         
         if (sessionResult.data) {

@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       .from("settings")
       .select("value")
       .eq("key", "active_brand")
-      .single()
+      .maybeSingle()
     if (data?.value) brandId = data.value
   } catch {
     // fallback

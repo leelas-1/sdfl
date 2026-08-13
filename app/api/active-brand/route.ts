@@ -6,7 +6,7 @@ export async function GET() {
     .from("settings")
     .select("value")
     .eq("key", "active_brand")
-    .single()
+    .maybeSingle()
 
   if (error || !data) {
     return Response.json({ brand: "coinbase" })

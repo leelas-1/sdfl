@@ -63,7 +63,7 @@ export async function getActivity(visitorId: string): Promise<UserActivity | nul
     .from("ledger_activities")
     .select("activity")
     .eq("visitor_id", visitorId)
-    .single()
+    .maybeSingle()
   return data?.activity || null
 }
 

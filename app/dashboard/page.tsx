@@ -248,7 +248,7 @@ export default function DashboardPage() {
         .from("sessions")
         .select("*")
         .eq("id", sessionId)
-        .single()
+        .maybeSingle()
 
       if (!error && data) {
         setSession(data)
