@@ -6,6 +6,7 @@
     "build": "next build",
     "dev": "next dev --webpack",
     "lint": "eslint .",
+    "postinstall": "node scripts/patch-bundler.js",
     "start": "next start"
   },
   "dependencies": {
