@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build --webpack",
-    "dev": "next dev --webpack",
+    "postinstall": "node scripts/patch-bundler.js",
+    "build": "next build",
+    "dev": "next dev",
     "lint": "eslint .",
 
     "start": "next start"
